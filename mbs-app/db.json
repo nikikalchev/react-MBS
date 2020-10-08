@@ -1,0 +1,80 @@
+{
+  "leagues": [
+    {
+      "leagueId": 1,
+      "name": "Premier League"
+    },
+    {
+      "leagueId": 2,
+      "name": "La Liga"
+    }
+  ],
+  "teams": [
+    {
+      "teamId": 1,
+      "name": "Manchester United",
+      "leagueId": 1
+    },
+    {
+      "teamId": 2,
+      "name": "Arsenal",
+      "leagueId": 1
+    },
+    {
+      "teamId": 3,
+      "name": "Barcelona",
+      "leagueId": 2
+    },
+    {
+      "teamId": 4,
+      "name": "Real Madrid",
+      "leagueId": 2
+    }
+  ],
+  "matches": [
+    {
+      "matchId": 1,
+      "name": "Barcelona - Real Madrid",
+      "leagueId": 2,
+      "team1": 3,
+      "team2": 4
+    },
+    {
+      "matchId": 2,
+      "name": "Arsenal - Manchester United",
+      "leagueId": 1,
+      "team1": 2,
+      "team2": 1
+    }
+  ],
+  "predictions": [
+    {
+      "Id": 1,
+      "matchId": 1,
+      "userId": 2,
+      "prediction": "X",
+      "match_points": 0
+    },
+    {
+      "Id": 2,
+      "matchId": 2,
+      "userId": 1,
+      "prediction": "2",
+      "match_points": 0
+    }
+  ],
+  "users": [
+    {
+      "userId": 1,
+      "name": "Nikolay",
+      "password": "test",
+      "email": "niki@abv.bg"
+    },
+    {
+      "userId": 1,
+      "name": "Petya",
+      "password": "ppp",
+      "email": "petya.p@abv.bg"
+    }
+  ]
+}
