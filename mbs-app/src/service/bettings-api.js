@@ -1,14 +1,14 @@
-export const BASE_URL = "http://localhost:3001";
+export const BASE_URL = "http://localhost:9001/api";
 
 class BettingApi {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
   }
 
-  async getAllMatches() {
-    const resp = await fetch(`${this.baseUrl}/matches`);
-    const matches = await resp.json();
-    return matches;
+  async getUsers() {
+    const res = await fetch(`${this.baseUrl}/user/all`);
+    const users = await res.json();
+    return users;
   }
 }
 

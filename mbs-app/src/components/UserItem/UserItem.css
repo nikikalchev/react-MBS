@@ -1,4 +1,4 @@
-.MatchItem {
+.UserItem {
     display: flex;
     justify-content: space-between;
     width: 78%;
@@ -9,41 +9,41 @@
     border-radius:  5px;
 }
 
-.MatchItem-left {
-    align-items: center;
-    display: flex;
-}
-
-.MatchItem-right {
+.UserItem-right {
     display: flex;
     justify-content: space-between;
 }
 
-.MatchItem-button {
+.UserItem-button {
     font-size: 18pt;
     color: green;
     margin: 10px;
     cursor: pointer;
 }
 
-.MatchItem-button:hover {
+.UserItem-button:hover {
     color:#3e8e41;
 }
 
-.nav-menu  .MatchItem {
-    width: 96.5%;
-  
-}
-
 @media only screen and (max-width: 1024px) {
-    .MatchItem {
+    .UserItem {
       width: 96.5%;
     }
 }
 
 @media only screen and (max-width: 1273px) and (min-width: 1025px) {
-    .MatchItem {
+    .UserItem {
       width: 72.5%;
     }
 }
 
+.UserItem-id {
+    float: left;
+    clear: left;
+}
+.UserItem-id font {
+    color:green;
+}
+#user-image{
+    width: 15%;
+}

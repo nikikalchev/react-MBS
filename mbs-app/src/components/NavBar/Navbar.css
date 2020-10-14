@@ -10,11 +10,20 @@
   font-size: 2rem;
   background: none;
 }
-#login-btn{
-  margin-right: 2rem;
+#login-btn {
   font-size: 2rem;
   background: none;
   color:green;
+  margin-right: 15px;
+}
+#logout-btn{
+  font-size: 2rem;
+  background: none;
+  color:green;
+  margin-right: 15px;
+}
+#logout-btn :hover{
+  color:#3e8e41;
 }
 #login-btn :hover{
   color:#3e8e41;
@@ -69,4 +78,31 @@
 }
 span {
   margin-left: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .nav-menu.active {
+    top: 0;
+    left: -100%;
+    transition: 850ms;
+  }
+  .nav-menu {
+    background-color:#4CAF50;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    transition: 850ms;
+  }
+  .about{
+    float:right;
+    width:98%;
+  }
+}
+
+#welcome-msg{
+  color: white;
 }

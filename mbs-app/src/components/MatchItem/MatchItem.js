@@ -1,20 +1,28 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { MatchType } from "../../model/match.model";
+import "./MatchItem.css";
 
 function MatchItem({ match }) {
-  return (
-    <div>
-        <div>
-            <span>
-                <img style={{width:"32px"}} src={require('../../logos/arsenal.png')} alt=""></img>
-            </span>
-            <span>Arsenal</span>
-            <span>01.03.2020</span>
-            <span>Manchester United</span>
-            <span>
-                <img style={{width:"32px"}} src={require('../../logos/arsenal.png')} alt=""></img>
-            </span>
-        </div>
+  useEffect(() => {
+  }, [])
+
+  function handleUpdate() {}
+
+  function handleDelete() {}
+
+  return (      
+    <div className="MatchItem">
+      <div className="MatchItem-left">
+        <span className="MatchItem-id">{match.name}</span>
+      </div>
+      <div className="MatchItem-right">
+        <span className="MatchItem-button fas fa-edit"
+              onClick={handleUpdate}
+        ></span>
+        <span className="MatchItem-button fas fa-trash-alt"
+              onClick={handleDelete}
+        ></span>
+      </div>
     </div>
   );
 }

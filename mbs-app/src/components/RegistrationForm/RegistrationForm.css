@@ -1,17 +1,17 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 form {
-    border: 3px solid #f1f1f1; 
-    width: 500px;
-	margin: 0 auto;
+  border: 3px solid #f1f1f1;
+  width: 500px;
+  margin: 0 auto;
 }
 
-#login-container{
-    margin-top:3px;
+#login-container {
+  margin-top: 3px;
 }
 
-text-field {
+.text-field {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0px 8px 0;
@@ -20,7 +20,7 @@ text-field {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   padding: 14px 20px;
   margin: 8px 10px;
@@ -53,8 +53,8 @@ span.psw {
 
 @media screen and (max-width: 300px) {
   span.psw {
-     display: block;
-     float: none;
+    display: block;
+    float: none;
   }
 }
 

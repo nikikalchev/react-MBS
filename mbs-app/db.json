@@ -1,46 +1,46 @@
 {
   "leagues": [
     {
-      "leagueId": 1,
+      "id": 1,
       "name": "Premier League"
     },
     {
-      "leagueId": 2,
+      "id": 2,
       "name": "La Liga"
     }
   ],
   "teams": [
     {
-      "teamId": 1,
+      "id": 1,
       "name": "Manchester United",
       "leagueId": 1
     },
     {
-      "teamId": 2,
+      "id": 2,
       "name": "Arsenal",
       "leagueId": 1
     },
     {
-      "teamId": 3,
+      "id": 3,
       "name": "Barcelona",
       "leagueId": 2
     },
     {
-      "teamId": 4,
+      "id": 4,
       "name": "Real Madrid",
       "leagueId": 2
     }
   ],
   "matches": [
     {
-      "matchId": 1,
+      "id": 1,
       "name": "Barcelona - Real Madrid",
       "leagueId": 2,
       "team1": 3,
       "team2": 4
     },
     {
-      "matchId": 2,
+      "id": 2,
       "name": "Arsenal - Manchester United",
       "leagueId": 1,
       "team1": 2,
@@ -49,14 +49,14 @@
   ],
   "predictions": [
     {
-      "Id": 1,
+      "id": 1,
       "matchId": 1,
       "userId": 2,
       "prediction": "X",
       "match_points": 0
     },
     {
-      "Id": 2,
+      "id": 2,
       "matchId": 2,
       "userId": 1,
       "prediction": "2",
@@ -65,16 +65,61 @@
   ],
   "users": [
     {
-      "userId": 1,
+      "id": 1,
       "name": "Nikolay",
       "password": "test",
-      "email": "niki@abv.bg"
+      "email": "niki@abv.bg",
+      "role": "admin"
     },
     {
-      "userId": 1,
-      "name": "Petya",
-      "password": "ppp",
-      "email": "petya.p@abv.bg"
+      "userId": null,
+      "name": "f",
+      "password": "gfh",
+      "email": "rty",
+      "role": "admin",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "nikolay",
+      "password": "MaL4uGa11",
+      "email": "nikikalchev@gmail.com",
+      "role": "admin"
+    },
+    {
+      "id": 4,
+      "name": "fdg",
+      "password": "hhh",
+      "email": "fg",
+      "role": "authorizedUser"
+    },
+    {
+      "id": 5,
+      "name": "df",
+      "password": "$2a$08$wg53BKA9rkn21IeXxXlqk.19yRRn9GwNVd48Di963NZyiJeadaFwe",
+      "email": "dg",
+      "role": "authorizedUser"
+    },
+    {
+      "id": 6,
+      "name": "fffff",
+      "password": "$2a$08$9JfmPSBbmHoZDKhRJPgIneIbsyk79QQJjKeMeN8OBpkD74tIzp77K",
+      "email": "gggg",
+      "role": "authorizedUser"
+    },
+    {
+      "id": 7,
+      "name": "rg",
+      "password": "$2a$08$9trH3j8sWKllXS.SbjC.MuypYLnM72GagyYS4QWcGh28jjuRctfSG",
+      "email": "dfg",
+      "role": "authorizedUser"
+    },
+    {
+      "id": 8,
+      "name": "ef",
+      "password": "$2a$08$0jzHjOfR0NVgM9DeC1w6gO9ZOy69KT9UGzpimIa0gEnHFWHlG7IQS",
+      "email": "er",
+      "role": "authorizedUser"
     }
   ]
 }

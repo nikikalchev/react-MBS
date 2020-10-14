@@ -16,7 +16,7 @@ function MatchesPage() {
     <div className="matches">
       {
         matches.map((match) => (
-            <MatchItem key={match.id} match={match}/>
+            <MatchItem key={match.matchId} match={match} />
         ))
       }
     </div>

@@ -3,16 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "@react-native-community/async-storage": "^1.12.1",
+    "bcryptjs": "^2.4.3",
     "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
     "lite-server": "^2.5.4",
+    "local-storage": "^2.0.0",
+    "mongoose": "^5.10.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.9.2",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"react-scripts start\" \"npx json-server --watch db.json --port 3001\" ",
+    "start": "concurrently --kill-others \"react-scripts start\" \"nodemon ./src/server/server.js \" ",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -31,5 +40,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "react-native": "^0.63.3"
   }
 }

@@ -37,12 +37,23 @@
   }
 }
 
+.about,
+.users,
+.login,
 .bettings,
+.about,
 .standings,
-.matches {
+.matches{
   display: flex;
-  height: 40vh;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-content: center;
+  padding:15px;
+  float:right;
+  width:77%;
+}
+.betting-image{
+  width:40%;
 }
