@@ -40,24 +40,4 @@ router.post('/login', async (req, res) => {
     res.send(user);  
 })
 
-router.get('/all', async (req, res) => {
-    try {
-        const users = await User.find();
-        res.send(users);
-    } catch (err) {
-        sendErrorResponse(req, res, 500, `Server error: ${err.message}`, err);
-    }
-});
-
-function sendErrorResponse(req, res, status, message, err) {
-    if(req.get('env') === 'production') {
-        err = undefined;
-    }
-    res.status(status).json({
-        code: status,
-        message,
-        error: err
-    })
-}
-
 module.exports = router;

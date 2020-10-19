@@ -18,7 +18,8 @@
     "react-hook-form": "^6.9.2",
     "react-icons": "^3.11.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "underscore-node": "^0.1.2"
   },
   "scripts": {
     "start": "concurrently --kill-others \"react-scripts start\" \"nodemon ./src/server/server.js \" ",

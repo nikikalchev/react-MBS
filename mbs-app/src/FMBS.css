@@ -38,6 +38,7 @@
 }
 
 .about,
+.personalData,
 .users,
 .login,
 .bettings,
@@ -54,6 +55,12 @@
   float:right;
   width:77%;
 }
+#bet-image{
+  width:13%;
+}
 .betting-image{
   width:40%;
+}
+#standing-image{
+   width:20%;
 }

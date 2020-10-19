@@ -22,6 +22,6 @@ const userSchema = new mongoose.Schema({
     type: String,
     default: 'Registered'
   },
-});
+},{ versionKey: false });
 
 module.exports = mongoose.model('User', userSchema);

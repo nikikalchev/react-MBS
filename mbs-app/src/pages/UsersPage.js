@@ -1,27 +1,84 @@
 import React, { useEffect, useState } from "react";
 import UserItem from "../components/UserItem/UserItem";
-import bettingsApi from "../service/bettings-api";
+import UserEdit from "../components/UserItem/UserEdit";
+import usersApi from "../service/users-api";
 
 function UsersPage() {
 
   const [users, setUsers] = useState([]);
+  const [formType, setFormType] = useState('list');
+  const [editUser, setEditUser] = useState();
+  const [mode, setMode] = useState('update');
 
   useEffect(() => {
     async function getUsers() {
-      setUsers(await bettingsApi.getUsers());
+      setUsers(await usersApi.getUsers());
     }
     getUsers();
   }, []);
+
+  function handleEditClick(user) {
+    setFormType('edit');
+    setEditUser(user);
+  }
+
+  async function handleDeleteClick(userToDelete) {
+    await usersApi.deleteUser(userToDelete._id);
+    setUsers(users.filter(user => user._id !== userToDelete._id));
+  }
+
+  function handleCancelClick() {
+    setFormType('list');
+  }
+
+  async function handleSaveClick(updatedUser) {
+    setEditUser(updatedUser);
+    if (mode === 'create') {
+      setUsers(users.concat(updatedUser));
+    } else {
+      setUsers(users.map(user => user._id === updatedUser._id ? updatedUser : user));
+    }
+    setFormType('list');
+  }
+
+  async function handleCreate() {
+    setFormType('edit');
+    setMode('create');
+    setEditUser({});
+  }
 
   return (
     <div className="users">
       <img src="../../../images/users.png" id="user-image" alt="users" />
       {
+        formType === 'list' ?
+          <span className="UserItem-create fas fa-plus" title="create"
+            onClick={() => { handleCreate() }}>
+          </span>
+          : <></>
+      }
+      {
         users.map((user) => (
-          <UserItem key={user._id} user={user} />
+          <React.Fragment key={user._id}>
+            {
+              formType === 'list' ?
+                <UserItem user={user}
+                  onClickEdit={handleEditClick}
+                  onClickDelete={handleDeleteClick} />
+                : <></>
+            }
+          </React.Fragment>
         ))
       }
+      {formType === 'edit' ?
+        <UserEdit user={editUser}
+          onClickCancel={handleCancelClick}
+          onClickSave={handleSaveClick}
+          mode={mode} />
+        : <></>
+      }
     </div>
+
   );
 }
 

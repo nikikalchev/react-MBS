@@ -8,21 +8,21 @@ export const SidebarData = [
     path: '/',
     icon: <IoIcons.IoIosInformationCircle />,
     cName: 'nav-text',
-    roles: ['admin','registered','anonymous']
+    roles: ['admin','Registered','anonymous']
   },
   {
     title: 'Bettings',
     path: '/betting',
     icon: <AiIcons.AiFillEdit />,
     cName: 'nav-text',
-    roles: ['admin','registered','anonymous']
+    roles: ['admin','Registered']
   },
   {
     title: 'Standings',
     path: '/standings',
     icon: <IoIcons.IoIosBook />,
     cName: 'nav-text',
-    roles: ['admin','registered','anonymous']
+    roles: ['admin','Registered','anonymous']
   },
   {
     title: 'Matches',
@@ -34,8 +34,15 @@ export const SidebarData = [
   {
     title: 'Users',
     path: '/users',
-    icon: <IoIcons.IoIosPerson />,
+    icon: <IoIcons.IoMdPersonAdd />,
     cName: 'nav-text',
     roles: ['admin']
+  },
+  {
+    title: 'Personal Info',
+    path: '/info',
+    icon: <IoIcons.IoMdPerson />,
+    cName: 'nav-text',
+    roles: ['admin','Registered']
   }
 ];

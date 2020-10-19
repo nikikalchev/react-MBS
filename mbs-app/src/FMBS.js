@@ -11,6 +11,7 @@ import { verifyToken } from './service/utills';
 import AboutPage from './pages/About';
 import { PrivateRoute } from './components/NavBar/PrivateRoute';
 import UsersPage from './pages/UsersPage';
+import PersonalDataPage from './pages/PersonalDataPage';
 
 function FMBS() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,9 +34,10 @@ function FMBS() {
           <Switch>
             <Route path='/' exact component={AboutPage} />
             <PrivateRoute exact path="/betting" component={BettingsPage} />
-            <PrivateRoute exact path="/standings" component={StandingsPage} />
+            <Route path="/standings" component={StandingsPage} />
             <PrivateRoute exact path="/matches" component={MatchesPage} />
             <PrivateRoute exact path="/users" component={UsersPage} />
+            <PrivateRoute exact path="/info" component={PersonalDataPage} />
             <Route path='/login' render={() => <LoginPage onUserLoggedIn={() => checkIsUserLoggedIn()} />} />
             <Route path='/register' render={() => <RegistrationPage onUserRegistration={checkIsUserLoggedIn} />} />
           </Switch>

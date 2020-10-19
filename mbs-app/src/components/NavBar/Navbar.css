@@ -13,13 +13,13 @@
 #login-btn {
   font-size: 2rem;
   background: none;
-  color:green;
+  color:white;
   margin-right: 15px;
 }
 #logout-btn{
   font-size: 2rem;
   background: none;
-  color:green;
+  color:white;
   margin-right: 15px;
 }
 #logout-btn :hover{
@@ -104,5 +104,5 @@ span {
 }
 
 #welcome-msg{
-  color: white;
+  color: black;
 }

@@ -53,6 +53,15 @@ export function getUserName() {
     return data.user.name;
 }
 
+export function getLoggedInUserData() {
+    const token = localStorage.getItem('auth-token');
+    if (!token) {
+        return '';
+    }
+    const data = jwt.verify(token, 'jksf!dsf@35dsddg');
+    return data.user;
+}
+
 export function getUserRole() {
     const token = localStorage.getItem('auth-token');
     if (!token) {

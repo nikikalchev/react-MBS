@@ -1,0 +1,36 @@
+#table-standings {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#table-standings td,
+#table-standings th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table-standings tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table-standings tr:hover {
+  background-color: #ddd;
+}
+
+#table-standings th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4caf50;
+  color: white;
+}
+#number-column {
+  width: 15%;
+}
+#name-column {
+  width: 70%;
+}
+#points-column {
+  width: 15%;
+}

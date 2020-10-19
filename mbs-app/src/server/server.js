@@ -24,8 +24,16 @@ app.use(function(req, res, next) {
   next();
 });
 
-const authRoute = require("./auth");
+const authRouter = require("./auth-router");
+const usersRouter = require("./users-router");
+const matchesRouter = require("./matches-router");
+const teamsRouter = require("./teams-router");
+const bettingsRouter = require("./bettings-router");
 
-app.use("/api/user", authRoute);
+app.use("/api/auth", authRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/matches", matchesRouter);
+app.use("/api/teams", teamsRouter);
+app.use("/api/bettings", bettingsRouter);
 
 app.listen(9001, () => console.log("Server is up!"));

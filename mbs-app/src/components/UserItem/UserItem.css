@@ -20,6 +20,16 @@
     margin: 10px;
     cursor: pointer;
 }
+.UserItem-delete {
+    font-size: 18pt;
+    color: #ff6666;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.UserItem-delete:hover {
+    color:red;
+}
 
 .UserItem-button:hover {
     color:#3e8e41;
@@ -45,5 +55,14 @@
     color:green;
 }
 #user-image{
-    width: 15%;
+    width: 10%;
+}
+.UserItem-create{
+    color:blue;
+    font-size: 18pt;
+    margin: 10px;
+    cursor: pointer;
+}
+.UserItem-create:hover{
+    color:#41a4f0;
 }

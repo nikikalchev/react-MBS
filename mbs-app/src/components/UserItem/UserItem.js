@@ -1,14 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { UserType } from "../../model/user.model";
 import "./UserItem.css";
 
-function UserItem({ user }) {
-    useEffect(() => {
-    }, [])
+function UserItem({ user, onClickEdit, onClickDelete }) {
 
-    function handleUpdate() { }
+    function handleUpdate() {
+        onClickEdit(user);
+    }
 
-    function handleDelete() { }
+    function handleDelete() { 
+        onClickDelete(user);
+    }
 
     return (
         <div className="UserItem">
@@ -18,10 +20,10 @@ function UserItem({ user }) {
                 <span className="UserItem-id">Role: <font>{user.role}</font></span>
             </div>
             <div className="UserItem-right">
-                <span className="UserItem-button fas fa-edit"
-                    onClick={handleUpdate}
-                ></span>
-                <span className="UserItem-button fas fa-trash-alt"
+                <span className="UserItem-button fas fa-edit" title="edit"
+                    onClick={handleUpdate}>
+                </span>
+                <span className="UserItem-delete fas fa-trash-alt" title="delete"
                     onClick={handleDelete}
                 ></span>
             </div>

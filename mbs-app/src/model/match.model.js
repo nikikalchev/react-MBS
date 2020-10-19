@@ -1,17 +1,20 @@
 import PropTypes from 'prop-types'
+import { TeamType } from './team.model';
 
 export class Match {
-    matchId = undefined;
-    constructor(team1Id, team2Id, leagueId) {
-        this.team1 = team1Id;
-        this.team2 = team2Id;
-        this.league = leagueId;
+    Id = undefined;
+    constructor(team1, team2, goalsTeam1, goalsTeam2) {
+        this.team1 = team1;
+        this.team2 = team2;
+        this.goalsTeam1 = goalsTeam1;
+        this.goalsTeam2 = goalsTeam2;
     }
 }
 
 export const MatchType = PropTypes.shape({
-    matchId: PropTypes.number,
-    team1Id: PropTypes.number,
-    team2Id: PropTypes.number,
-    leagueId: PropTypes.number
+    Id: PropTypes.number,
+    team1: TeamType,
+    team2: TeamType,
+    goalsTeam1: PropTypes.string,
+    goalsTeam2: PropTypes.string
 })

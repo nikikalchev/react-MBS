@@ -31,7 +31,7 @@ function LoginForm({onUserLoggedIn}) {
         if(!loginUser.error){
             //generate JSON webtoken and store it in the local storage
             //const token = jwt.sign({ _id: loginUser._id }, 'jksf!dsf@35dsddg', { expiresIn: 3600});
-            const token = jwt.sign({ user: loginUser }, 'jksf!dsf@35dsddg', { expiresIn: 3600});  
+            const token = jwt.sign({ user: loginUser }, 'jksf!dsf@35dsddg', { expiresIn: 86400});  
             localStorage.setItem('auth-token', token);
             history.push("/");
             onUserLoggedIn();
@@ -76,6 +76,7 @@ function LoginForm({onUserLoggedIn}) {
                         <input type="password" 
                                placeholder="Enter Password" 
                                className="text-field"
+                               autoComplete="new-password"
                                onChange={handlePasswordChanged} 
                                name="password" required />
                     </div>

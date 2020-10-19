@@ -1,0 +1,81 @@
+.form-text, .form-select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .form-submit {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-submit:hover {
+    background-color: #45a049;
+  }
+  
+  .main-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+  
+.UserEdit-button {
+    font-size: 25pt;
+    color: green;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    margin-left: 0px;
+}
+
+.UserEdit-delete {
+  font-size: 25pt;
+  color: red;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.UserEdit-delete:hover {
+  color:#ff6666;
+}
+
+.UserEdit-button:hover {
+    color:#3e8e41;
+}
+
+.valid{
+  display: none;
+}
+
+.invalid{
+  display: "inline-block";
+  color:red;
+  border: 0px;
+  margin-top:20px;
+  margin-bottom:20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.invisible-msg{
+  display: none;
+}
+.visible-msg{
+  display: "inline-block";
+  color:green;
+  background-color: #f2f2f2;
+  border: 0px;
+  margin-bottom:20px;
+  width: 100%;
+  box-sizing: border-box;
+}

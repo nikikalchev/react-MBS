@@ -1,5 +1,5 @@
-export const REGISTER_URL = "http://localhost:9001/api/user/register";
-export const LOGIN_URL = "http://localhost:9001/api/user/login";
+export const REGISTER_URL = "http://localhost:9001/api/auth/register";
+export const LOGIN_URL = "http://localhost:9001/api/auth/login";
 
 class AuthorizationApi {
     constructor(loginUrl, registerUrl) {

@@ -34,7 +34,7 @@ function RegistrationForm({onUserRegistration}) {
     if(!newUser.error){
       //generate JSON webtoken and store it in the local storage
       //const token = jwt.sign({ _id: newUser._id }, 'jksf!dsf@35dsddg', { expiresIn: 3600}); 
-      const token = jwt.sign({ user: newUser }, 'jksf!dsf@35dsddg', { expiresIn: 3600}); 
+      const token = jwt.sign({ user: newUser }, 'jksf!dsf@35dsddg', { expiresIn: 86400}); 
       localStorage.setItem('auth-token', token);
       history.push("/");
       onUserRegistration();
@@ -108,6 +108,7 @@ function RegistrationForm({onUserRegistration}) {
               type="password"
               placeholder="Enter Password"
               name="password"
+              autoComplete="new-password"
               className="text-field"
               onChange={handlePasswordChanged}
               required

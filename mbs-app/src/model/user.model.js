@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 
 export class User {
   Id = undefined;
-  role = 'registered';
+  role = 'Registered';
   constructor(name, email, password) {
     this.name = name;
     this.email = email;

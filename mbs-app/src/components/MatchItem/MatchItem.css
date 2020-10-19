@@ -12,6 +12,13 @@
 .MatchItem-left {
     align-items: center;
     display: flex;
+    width:100%;
+}
+
+.MatchItem-result {
+    align-items: center;
+    display: flex;
+    width:50%;
 }
 
 .MatchItem-right {
@@ -22,7 +29,7 @@
 .MatchItem-button {
     font-size: 18pt;
     color: green;
-    margin: 10px;
+    margin: 18px 0px 0px 0px;
     cursor: pointer;
 }
 
@@ -45,5 +52,28 @@
     .MatchItem {
       width: 72.5%;
     }
+}
+#match-image{
+    width: 10%;
+}
+.MatchItem-create{
+    color:blue;
+    font-size: 18pt;
+    margin: 10px;
+    cursor: pointer;
+}
+.MatchItem-create:hover{
+    color:#41a4f0;
+}
+
+.MatchItem-delete {
+    font-size: 18pt;
+    color: #ff6666;
+    margin: 18px 5px 0px 0px;
+    cursor: pointer;
+}
+
+.MatchItem-delete:hover {
+    color:red;
 }
 
