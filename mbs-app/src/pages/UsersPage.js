@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import UserItem from "../components/UserItem/UserItem";
 import UserEdit from "../components/UserItem/UserEdit";
 import usersApi from "../service/users-api";
+import bettingsApi from "../service/bettings-api";
 
 function UsersPage() {
 
@@ -24,6 +25,10 @@ function UsersPage() {
 
   async function handleDeleteClick(userToDelete) {
     await usersApi.deleteUser(userToDelete._id);
+    const bettings = await bettingsApi.getBettings(userToDelete._id);
+    bettings.map(async (betting) => {
+        await bettingsApi.deleteBettingByUser(betting.user._id);
+    });
     setUsers(users.filter(user => user._id !== userToDelete._id));
   }
 

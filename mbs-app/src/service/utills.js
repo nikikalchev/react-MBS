@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 
 export const ADMIN = 'admin';
-export const REGISTERED_USER = 'registered';
+export const REGISTERED_USER = 'Registered';
 
 export function verifyToken() {
     const token = localStorage.getItem('auth-token');

@@ -47,10 +47,12 @@ function BettingsPage() {
             {<BettingItem bet={bet} />}
           </React.Fragment>
         ))}
-
-        <button type="submit" id="submit-bet">
-          Submit
-        </button>
+        {bets.length > 0 ?
+          <button type="submit" id="submit-bet">
+            Submit
+          </button>
+          : <></>
+        }
       </form>
     </div>
   );

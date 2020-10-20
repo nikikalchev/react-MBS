@@ -40,6 +40,12 @@ class BettingsApi {
         });
     }
 
+    async deleteBettingByUser(userId) {
+        await fetch(`${this.baseUrl}/deleteUser/${userId}`, {
+            method: 'DELETE'
+        });
+    }
+
     async createBetting(betting) {
         const resp = await fetch(`${this.baseUrl}/create`,{
             method: 'POST',

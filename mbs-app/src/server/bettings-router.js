@@ -77,8 +77,23 @@ router.delete("/delete/:matchId", async (req, res) => {
     );
     return;
   }
-  await Betting.delete({ matchId: req.params.matchId });
+  await Betting.deleteOne({ matchId: req.params.matchId });
   res.send("Betting deleted!");
+});
+
+router.delete("/deleteUser/:userId", async (req, res) => {   
+  const bettingToDelete = await Betting.find({ "user._id": req.params.userId });
+  if (!bettingToDelete) {
+    sendErrorResponse(
+      req,
+      res,
+      404,
+      `Bettings for user=${req.params.userId} does not exist`
+    );
+    return;
+  }
+  await Betting.deleteMany({ "user._id": req.params.userId });
+  res.send("Bettings deleted!");
 });
 
 router.post("/create", async (req, resp) => {

@@ -4,7 +4,7 @@ import { getLoggedInUserData } from '../service/utills';
 import usersApi from "../service/users-api";
 import "../components/UserItem/UserItem.css";
 
-function PersonalDataPage() {
+function PersonalDataPage({onRefresh}) {
     const [data, setData] = useState({});
 
     useEffect(() => {
@@ -22,7 +22,7 @@ function PersonalDataPage() {
             {Object.entries(data).length !== 0 ?
                 <>
                     <img src="../../../images/users.png" id="user-image" alt="personalData" />
-                    <UserEdit user={data} mode={pageMode} />
+                    <UserEdit user={data} mode={pageMode} onRefresh={onRefresh}/>
                 </>
                 : <img src="../../../images/loading.gif" id="loading-image" alt="loading" />
             }

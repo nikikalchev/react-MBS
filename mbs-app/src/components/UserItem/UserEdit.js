@@ -2,12 +2,13 @@ import React, { useState, useRef } from "react";
 import { UserType } from "../../model/user.model";
 import "./UserEdit.css";
 import usersApi from "../../service/users-api";
+import bettingsApi from "../../service/bettings-api";
 import { isAdmin } from "../../service/utills";
 import { Link } from "react-router-dom";
 
 var bcrypt = require("bcryptjs");
 
-function UserEdit({ user, onClickCancel, onClickSave, mode }) {
+function UserEdit({ user, onClickCancel, onClickSave, mode, onRefresh }) {
 
     const [updatedUser, setUpdatedUser] = useState(user);
     const [valid, setValid] = useState(true);
@@ -25,6 +26,11 @@ function UserEdit({ user, onClickCancel, onClickSave, mode }) {
             savedUser = await usersApi.updateUser(updatedUser);
         }
         if (savedUser) {
+            const bettings = await bettingsApi.getBettings(updatedUser._id);
+            bettings.map(async (betting) => {
+                betting.user = updatedUser;
+                await bettingsApi.updateBetting(betting);
+            });
             if (!savedUser.error && mode!=='personalInfo') {  
                 setValid(savedUser.error ? false : true);
                 errorField.current.value = savedUser.error;
@@ -37,6 +43,7 @@ function UserEdit({ user, onClickCancel, onClickSave, mode }) {
                 setTimeout(() => {
                     setSuccessMsg(false);
                 }, 3000);
+                onRefresh(updatedUser);
             }
         }
     }
